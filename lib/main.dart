@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_view/signup.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -7,19 +9,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:HomePage(context),
-    );
-  }
-  HomePage(context)
-  {
-    return Column(
-      children: [
-        ElevatedButton(onPressed: (){}, child: Text("Faheem-Dev Button"))
-      ],
+      title: 'Flutter Signup Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const SignupPage(),
     );
   }
 }
